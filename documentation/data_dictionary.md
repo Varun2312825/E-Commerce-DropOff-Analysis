@@ -1,4 +1,4 @@
-DATA DICTIONARY
+# Data Dictionary
 
 ## Grain
 
