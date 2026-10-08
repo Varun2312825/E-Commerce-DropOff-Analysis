@@ -8,12 +8,11 @@ Dataset: [eCommerce events history in electronics store](https://www.kaggle.com/
 
 Tools: Power BI Desktop only: Power Query (M) for cleaning and shaping, DAX for all analysis. No external database.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Key findings
 
-| # | Finding |
+| # | My Findings |
 |---|---|
 | 1 | **The biggest leak is view → cart:** 91.55% of viewing sessions never add to cart. Once a cart exists, 58.99% purchase. |
 | 2 | **Each +1 pp on view → cart ≈ 606,000 revenue** at current cart conversion and basket value. |
@@ -22,7 +21,7 @@ Tools: Power BI Desktop only: Power Query (M) for cleaning and shaping, DAX for 
 | 5 | **85% of sessions end after 1–2 events** and convert at 0.61%. Sessions with 10+ events convert at 46.9%. |
 | 6 | **Conversion rose from 3.94% to 5.58%** between September and February. It peaks around 10:00 UTC, and the weekday barely matters. |
 
-## Top recommendations
+## My recommendations
 
 | Recommendation | KPI to monitor |
 |---|---|
@@ -32,9 +31,8 @@ Tools: Power BI Desktop only: Power Query (M) for cleaning and shaping, DAX for 
 
 Full analysis: [insights and recommendations](documentation/insights_and_recommendations.md).
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Method
+## Method I used
 
 Business requirements → data profiling → Power Query cleaning (staged raw → clean) → star schema → DAX measures and funnel logic → dashboard → internal validation → recommendations.
 
@@ -46,7 +44,7 @@ Cleaning: 885,129 → 884,302 rows: 165 session-less rows and 662 duplicate even
 
 Validation: Eight invariant checks on a hidden QA page, including funnel monotonicity, depth bands summing to total sessions, product-dimension completeness and revenue integrity. All figures were also recomputed independently from the raw CSV.
 
-## Dashboard
+## Dashboards in power BI
 
 | Page | Answers |
 |---|---|
@@ -71,8 +69,5 @@ powerbi/         Power BI report (.pbix) and project files (.pbip)
 screenshots/     dashboard pages
 ```
 
-## Limitations 
-
-The data covers one store over five months: seasonality can't be separated from trend. There is no device, channel or geography data. 30.6% of view sessions lack a category. Hours are in UTC. Validation is internal to this project.
 
 
