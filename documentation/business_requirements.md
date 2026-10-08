@@ -1,4 +1,4 @@
-BUSINESS REQUIREMENTS
+# Business Requirements
 
 ## Context
 
@@ -10,7 +10,7 @@ Most sessions view products without purchasing. The business cannot see where in
 
 ## Stakeholders and their questions(Hypothetical)
 
-| Stakeholder | Question | Answered on page |
+| Stakeholder | Question that would be asked | Answered on page |
 |---|---|---|
 | Head of E-commerce | Where do we lose the most conversions? | Overview, Funnel |
 | Merchandising / category managers | Which categories and brands leak value? | Product, Segments |

@@ -1,6 +1,6 @@
 # Insights and Recommendations
 
-Data: 24 Sep 2020 – 28 Feb 2021 · 884,302 cleaned events · 490,398 sessions · 407,229 users · 53,452 products
+884,302 cleaned events · 490,398 sessions · 407,229 users · 53,452 products
 Conventions: sessions are distinct `user_session` values · rates are percentages · money is in the dataset's own currency units (the source does not state a currency) · hours are UTC · every figure below was checked against the QA page.
 
 ## Executive summary
@@ -14,7 +14,6 @@ The largest opportunities are:
 
 Top recommendation: test product-page and discovery improvements first, and track View → Cart rate weekly.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Headline KPIs
 
@@ -32,7 +31,6 @@ Top recommendation: test product-page and discovery improvements first, and trac
 
 AOV in this project divides revenue by purchased items, as defined in the KPI dictionary. Revenue per purchasing session is reported separately and always labelled as such.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Insight 1: The biggest leak is view → cart
 
@@ -126,15 +124,7 @@ AOV in this project divides revenue by purchased items, as defined in the KPI di
 - INFERENCE: Part of the purchase flow goes around the cart, for example a "buy now" path, or cart events are not always logged.
 - RECOMMENDATION: Confirm with the tracking team whether a direct-purchase path exists. Report both funnels until cart tracking is confirmed complete.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Data-quality notes
-
-- Missing category: `unknown` covers 149,524 view sessions (30.6%) and 493,897 revenue (9.6%), converting at 3.53%. Category conclusions describe the labelled 69% only.
-- Revenue concentration: computers generate 3,728,836 (72.8% of revenue) from 30.4% of view sessions and convert at 7.38%, the best of any category. Small changes in computers outweigh large changes elsewhere.
-- Cleaning: 885,129 raw rows → 884,302 clean rows. 827 rows were removed (0.09%): 165 had no session and 662 were duplicate events. No purchase has a price of zero or less.
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Recommendations (ranked by impact × feasibility)
@@ -148,7 +138,6 @@ AOV in this project divides revenue by purchased items, as defined in the KPI di
 | 5 | 30.6% of view sessions lack a category (data notes) | Hides category-level leaks | Fix product tagging at source | Medium | Fuller category analysis | % view sessions with `unknown` category |
 | 6 | Conversion peaks 06:00–12:00 UTC (Insight 4) | Better campaign timing | Schedule promotions in peak-converting hours | Low | Higher campaign conversion | Conversion by hour |
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Limitations
