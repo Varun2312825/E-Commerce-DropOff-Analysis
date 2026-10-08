@@ -64,7 +64,7 @@ Validation: Eight invariant checks on a hidden QA page, including funnel monoton
 
 ## Repository
 
-
+```
 data/            source notes (CSV not committed: download from Kaggle)
 documentation/   requirements, data and KPI dictionaries, cleaning log, validation, insights
 powerbi/         Power BI report (.pbix) and project files (.pbip)
